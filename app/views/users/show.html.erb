@@ -13,39 +13,36 @@
     </section>
   </aside>
 
-<div class="debt-table">
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th colspan="4" class="table-header">Debts You Owe</th>
-			</tr>
-			<tr>
-				<th>Lender</th>
-				<th>Debt Owed</th>
-				<th>Category</th>
-				<th>Fulfilled?</th>
-			</tr>
-		</thead>
+	<div class="debt-table">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th colspan="4" class="table-header">Debts You Owe</th>
+				</tr>
+				<tr>
+					<th>Lender</th>
+					<th>Debt Owed</th>
+					<th>Category</th>
+					<th>Fulfilled?</th>
+				</tr>
+			</thead>
 
-		<tbody>
-			<%= form_tag complete_path, :method => :put do %>
-      <% @user.debts.each do |debt| %>
-      
+			<tbody>
+				<%= form_tag complete_path, :method => :put do %>
+	      <% @user.debts.each do |debt| %>
+	      
 
-			<tr>
-				<td><%= debt.lender %></td>
-				<td><%= debt.description %></td>
-				<td><%= debt.category %></td>
-				<td><%= check_box_tag "debt_ids[]", debt.id, debt.is_fulfilled %></td>
-			</tr>
-			<% end %>
-		</tbody>
-	</table>
-  <%= hidden_field_tag 'user_id', @user.id %>
-  <%= submit_tag "Remove Debt", class: "btn btn-default" %>
-<% end %>
-</div>
-
-	<%= link_to 'New Debt', new_user_debt_path(@user), class: "user-links" %>
-	<%= link_to 'Edit Profile', edit_user_registration_path, class: "user-links" %>
+				<tr>
+					<td><%= debt.lender %></td>
+					<td><%= debt.description %></td>
+					<td><%= debt.category %></td>
+					<td><%= check_box_tag "debt_ids[]", debt.id, debt.is_fulfilled %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	  <%= hidden_field_tag 'user_id', @user.id %>
+	  <%= submit_tag "Remove Debt", class: "btn btn-default" %>
+	<% end %>
+	</div>
 </div>
