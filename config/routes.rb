@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get 'static_pages/about'
 
   devise_for :users, :controllers => {registrations: 'registrations'}
-  resources :users, only: [:show, :index]
-
-  resources :debts, except: [:index, :show]
+  
+  resources :users, only: [:show, :index] do
+		resources :debts, except: [:index, :show]
+	end
+	
 end

@@ -1,4 +1,5 @@
 class DebtsController < ApplicationController
+  before_action :set_user
 	before_action :set_debt, only: [:edit, :update, :destroy]
 
   def new
@@ -12,7 +13,7 @@ class DebtsController < ApplicationController
   	@debt = Debt.new(debt_params)
 
   	if @debt.save
-  		redirect_to root_path
+  		redirect_to user_path(@user)
   	else
   		render :new
   	end
@@ -20,7 +21,7 @@ class DebtsController < ApplicationController
 
   def update
   	if @debt.update(debt_params)
-  		redirect_to root_path
+  		redirect_to user_path(@user)
   	else
   		render :edit
   	end
@@ -28,11 +29,15 @@ class DebtsController < ApplicationController
 
   def destroy
   	@debt.destroy
-  	redirect_to root_path
+  	redirect_to user_path(@user)
   end
 
 
   private
+
+    def set_user
+      @user = User.find(params[:user_id])
+    end
 
   	def set_debt
   		@debt = Debt.find(params[:id])
