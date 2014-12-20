@@ -1,7 +1,9 @@
 <h1>All Users<h1>
 
 <% @users.each do |user| %>
-	<%= user.username %>
-	<%= user.email %>
-	<%= link_to 'User Page', user_path(user) %>
+	<ul class="user-list">
+		<li><%= user.username %></li>
+		<li><%= user.email %></li>
+		<li class="user-button-spacing"><%= link_to 'User Page', user_path(user), class: "btn btn-success btn-lg user-button"%></li>
+	</ul>
 <% end %>

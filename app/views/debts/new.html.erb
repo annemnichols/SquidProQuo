@@ -2,16 +2,13 @@
 <%= form_for [@user, @debt] do |f| %>
 
 	<%= f.label :lender %>
-	<%= f.text_field :lender %>
-	
+	<%= f.text_field :lender %><br>
+
 	<%= f.label :description %>
-	<%= f.text_field :description %>
+	<%= f.text_field :description %><br>
 
 	<%= f.label :category %>
-	<%= f.text_field :category %>
+	<%= f.text_field :category %><br>
 
-	<%= f.label :is_fulfilled %>
-	<%= f.check_box :is_fulfilled %>
-
-	<%= f.submit %>
+	<%= f.submit class: "btn btn-success btn-lg user-button" %>
 <% end %>
