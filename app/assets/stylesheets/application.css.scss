@@ -66,6 +66,7 @@ body {
 	}
 	td {
 		font-size: 1.25em;
+		text-align: center;
 	}
 }
 
@@ -103,4 +104,9 @@ label {
 
 .actions {
 	padding-top: 15px;
+}
+
+.remove-button {
+	background-color: #E27F2E;
+	border-color: #E27F2E;
 }
