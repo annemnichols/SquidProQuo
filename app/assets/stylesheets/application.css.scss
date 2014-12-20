@@ -13,5 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+$navbar-height: 100px;
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+	background-color: #5C5B59;
+}
+
+.main-body {
+	padding-top: 80px;
+}
+
+.navbar {
+	background-color: #E4E0D4;
+}
+
+.navbar-brand {
+	font-size: 3em;
+	font-family: 'Montserrat';
+}
+
+.nav-text {
+	font-size: 1.5em;
+}
+
+.logo {
+	padding-top: 15px;
+	padding-bottom: 25px;
+	padding-left: 30px;
+}
+
+.jumbotron {
+	margin-top: 20px;
+	padding: 15px;
+	background-color: #E4E0D4;
+	.btn {
+		background-color: #E27F2E;
+	}
+}
