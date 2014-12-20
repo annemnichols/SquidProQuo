@@ -1,6 +1,3 @@
-<h1><center>SQUID PRO QUO</center></h1>
-<p>Lorem Ipsum Ann and Khuong and Cragsum.</p>
-
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -12,23 +9,23 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <%= image_tag "coffee.jpg" %>
+      <%= image_tag "coffee.png" %>
       <div class="carousel-caption">
         <h1>Friend got your coffee this time?<h1>
       </div>
     
     </div>
     <div class="item">
-    <%= image_tag "money.jpg" %>
+    <%= image_tag "lending-money.jpg" %>
       <div class="carousel-caption">
         <h1>Keep track -- and get 'em back next time.<h1>
       </div>
     
     </div>
     <div class="item">
-      <%= image_tag "images.jpeg" %>
+      <%= image_tag "moving.jpg" %>
       <div class="carousel-caption">
-              <h1><i>Stay</i> friends with your friends.<br>with Squid Pro Quo.<h1>       
+              <h1><i>Stay</i> friends with your friends,<br>with Squid Pro Quo.<h1>       
       </div>
     </div>
     ...
@@ -43,4 +40,9 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
+
+<div class="jumbotron">
+ <h3><center>Click here to get started.<center></h3>
+ <p><center><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success btn-lg" %></center></p>
 </div>

@@ -8,9 +8,11 @@
 </head>
 <body>
   <%= render "layouts/navbar" %>
-  <p class="notice"><%= notice if notice%></p>
-  <p class="alert"><%= alert if alert %></p>
-<%= yield %>
+  <div class='container main-body'>
+  	<p class="notice"><%= notice if notice%></p>
+  	<p class="alert"><%= alert if alert %></p>
+		<%= yield %>
+	</div>
 
 </body>
 </html>
