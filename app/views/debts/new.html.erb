@@ -8,7 +8,7 @@
 	<%= f.text_field :description %><br>
 
 	<%= f.label :category %>
-	<%= f.text_field :category %><br>
+	<%= f.select(:category,['Money','Food','Service','Other'])%><br>
 
 	<%= f.submit class: "btn btn-success btn-lg user-button" %>
 <% end %>
