@@ -10,6 +10,7 @@
 	<%= debt.description %>
 	<%= debt.category %>
 	<%= debt.is_fulfilled %>
+	<%= debt.lender %>
 	<%= link_to 'Edit', edit_user_debt_path(@user, debt) %>
 	<%= link_to 'Delete', user_debt_path(@user, debt), method: :delete %>
 <% end %>
