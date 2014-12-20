@@ -32,6 +32,11 @@ class DebtsController < ApplicationController
   	redirect_to user_path(@user)
   end
 
+  def complete
+    debts = Debt.find(params[:debt_ids])
+    debts.each { |debt| debt.destroy }
+    redirect_to user_path(@user)
+  end
 
   private
 
