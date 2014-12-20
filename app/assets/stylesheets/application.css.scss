@@ -56,3 +56,21 @@ body {
 		background-color: #E27F2E;
 	}
 }
+
+.table {
+	width: 75%;
+	th {
+		font-size: 1.5em;
+	}
+	td {
+		font-size: 1.25em;
+	}
+}
+
+.debt-table {
+	padding-bottom: 30px;
+}
+
+.table-header {
+	text-align: center;
+}

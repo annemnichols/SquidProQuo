@@ -1,23 +1,42 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h4>
+      <h2>
         <%= gravatar_for @user %>
         <%= @user.username %>
+      </h2>
+      <h3>
 				<%= @user.email %>
-      </h4>
+			</h3>
     </section>
   </aside>
-  <div class="col-md-8">
-    <% if @user.debts.any? %>
-      <% @user.debts.each do |debt| %>
-				<%= debt.description %>
-				<%= debt.category %>
-				<%= debt.lender %>
-				<%= debt.is_fulfilled %>
-				<%= link_to 'Edit', edit_user_debt_path(@user, debt) %>
-				<%= link_to 'Delete', user_debt_path(@user, debt), method: :delete %>
+
+<div class="debt-table">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th colspan="4" class="table-header">Debts You Owe</th>
+			</tr>
+			<tr>
+				<th>Lender</th>
+				<th>Debt Owed</th>
+				<th>Category</th>
+				<th>Fulfilled?</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @user.debts.each do |debt| %>
+			<tr>
+				<td><%= debt.lender %></td>
+				<td><%= debt.description %></td>
+				<td><%= debt.category %></td>
+				<td><%= debt.is_fulfilled %></td>
+			</tr>
 			<% end %>
-    <% end %>
-  </div>
+		</tbody>
+	</table>
 </div>
+
+	<%= link_to 'New Debt', new_user_debt_path(@user), class: "user-links" %>
+	<%= link_to 'Edit Profile', edit_user_registration_path, class: "user-links" %>
