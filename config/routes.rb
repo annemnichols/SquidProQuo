@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :index] do
 		resources :debts, except: [:index, :show]
 	end
-	
+  put '/complete', to: 'debts#complete', as: :complete	
 end
