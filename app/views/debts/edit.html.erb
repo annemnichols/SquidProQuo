@@ -8,8 +8,8 @@
 	<%= f.text_field :description %>
 
 	<%= f.label :category %>
-	<%= f.text_field :category %>
-
+  <%= f.select(:category,['Money','Food','Service','Other'])%><br>
+	
 	<%= f.label :is_fulfilled %>
 	<%= f.check_box :is_fulfilled %>
 
