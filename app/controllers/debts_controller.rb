@@ -1,4 +1,5 @@
 class DebtsController < ApplicationController
+  before_action :set_user
 	before_action :set_debt, only: [:edit, :update, :destroy]
 
   def new
@@ -33,6 +34,10 @@ class DebtsController < ApplicationController
 
 
   private
+
+    def set_user
+      @user = User.find(params[:user_id])
+    end
 
   	def set_debt
   		@debt = Debt.find(params[:id])
