@@ -13,6 +13,7 @@
       <% @user.debts.each do |debt| %>
 				<%= debt.description %>
 				<%= debt.category %>
+				<%= debt.lender %>
 				<%= debt.is_fulfilled %>
 				<%= link_to 'Edit', edit_user_debt_path(@user, debt) %>
 				<%= link_to 'Delete', user_debt_path(@user, debt), method: :delete %>
@@ -20,4 +21,3 @@
     <% end %>
   </div>
 </div>
-

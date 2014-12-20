@@ -44,6 +44,6 @@ class DebtsController < ApplicationController
   	end
 
   	def debt_params
-  		params.require(:debt).permit(:description, :category, :is_fulfilled, :user_id)
+  		params.require(:debt).permit(:description, :category, :is_fulfilled, :user_id, :lender)
   	end
 end
