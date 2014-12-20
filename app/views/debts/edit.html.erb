@@ -1,13 +1,14 @@
 <h1> Edit Debt </h1>
 <%= form_for [@user, @debt] do |f| %>
+
+	<%= f.label :lender %>
+	<%= f.text_field :lender %>
+	
 	<%= f.label :description %>
 	<%= f.text_field :description %>
 
 	<%= f.label :category %>
 	<%= f.text_field :category %>
-
-	<%= f.label :lender %>
-	<%= f.text_field :lender %>
 
 	<%= f.label :is_fulfilled %>
 	<%= f.check_box :is_fulfilled %>
