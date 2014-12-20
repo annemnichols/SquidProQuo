@@ -3,14 +3,14 @@ class DebtsController < ApplicationController
 	before_action :set_debt, only: [:edit, :update, :destroy]
 
   def new
-  	@debt = Debt.new
+  	@debt = @user.debts.new
   end
 
   def edit
   end	
 
   def create
-  	@debt = Debt.new(debt_params)
+  	@debt = @user.debts.build(debt_params)
 
   	if @debt.save
   		redirect_to user_path(@user)
