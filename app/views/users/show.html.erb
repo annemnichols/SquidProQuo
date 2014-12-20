@@ -8,6 +8,8 @@
       <h3>
 				<%= @user.email %>
 			</h3>
+			<h4><%= link_to 'New Debt', new_user_debt_path(@user), class: "btn btn-success btn-lg user-button" %></h4>
+			<h4><%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-success btn-lg user-button" %></h4>
     </section>
   </aside>
 
@@ -46,3 +48,4 @@
 
 	<%= link_to 'New Debt', new_user_debt_path(@user), class: "user-links" %>
 	<%= link_to 'Edit Profile', edit_user_registration_path, class: "user-links" %>
+</div>
