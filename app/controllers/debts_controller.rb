@@ -13,7 +13,7 @@ class DebtsController < ApplicationController
   	@debt = Debt.new(debt_params)
 
   	if @debt.save
-  		redirect_to root_path
+  		redirect_to user_path(@user)
   	else
   		render :new
   	end
@@ -21,7 +21,7 @@ class DebtsController < ApplicationController
 
   def update
   	if @debt.update(debt_params)
-  		redirect_to root_path
+  		redirect_to user_path(@user)
   	else
   		render :edit
   	end
@@ -29,7 +29,7 @@ class DebtsController < ApplicationController
 
   def destroy
   	@debt.destroy
-  	redirect_to root_path
+  	redirect_to user_path(@user)
   end
 
 
