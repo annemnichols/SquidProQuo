@@ -1,5 +1,5 @@
 <h1> Edit Debt </h1>
-<%= form_for @debt do |f| %>
+<%= form_for [@user, @debt] do |f| %>
 	<%= f.label :description %>
 	<%= f.text_field :description %>
 
