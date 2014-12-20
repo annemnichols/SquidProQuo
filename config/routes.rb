@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :debts, except: [:index, :show]
+
   devise_for :users
   root 'static_pages#index'
 

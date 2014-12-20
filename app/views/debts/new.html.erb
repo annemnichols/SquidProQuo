@@ -1,0 +1,13 @@
+<h1> New Debt </h1>
+<%= form_for @debt do |f| %>
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+
+	<%= f.label :category %>
+	<%= f.text_field :category %>
+
+	<%= f.label :is_fulfilled %>
+	<%= f.check_box :is_fulfilled %>
+
+	<%= f.submit %>
+<% end %>
