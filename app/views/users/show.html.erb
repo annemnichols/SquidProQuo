@@ -12,7 +12,6 @@
 			<h4><%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-success btn-lg user-button" %></h4>
     </section>
   </aside>
-
 	<div class="debt-table">
 		<table class="table table-striped">
 			<thead>
@@ -26,23 +25,20 @@
 					<th>Fulfilled?</th>
 				</tr>
 			</thead>
-
 			<tbody>
 				<%= form_tag complete_path, :method => :put do %>
-	      <% @user.debts.each do |debt| %>
-	      
-
-				<tr>
-					<td><%= debt.lender %></td>
-					<td><%= debt.description %></td>
-					<td><%= debt.category %></td>
-					<td><%= check_box_tag "debt_ids[]", debt.id, debt.is_fulfilled %></td>
-				</tr>
+	       <% @user.debts.each do |debt| %>
+  				<tr>
+  					<td><%= debt.lender %></td>
+  					<td><%= debt.description %></td>
+  					<td><%= debt.category %></td>
+  					<td><%= check_box_tag "debt_ids[]", debt.id, debt.is_fulfilled %></td>
+  				</tr>
 				<% end %>
 			</tbody>
 		</table>
 	  <%= hidden_field_tag 'user_id', @user.id %>
 	  <%= submit_tag "Remove Debt", class: "btn btn-success btn-lg remove-button" %>
-	<% end %>
+	   <% end %>
 	</div>
 </div>

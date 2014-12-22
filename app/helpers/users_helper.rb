@@ -8,4 +8,5 @@ module UsersHelper
     image_tag(gravatar_url, alt: user.username, class: "gravatar")
   end
 
+
 end
